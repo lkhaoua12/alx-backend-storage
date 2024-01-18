@@ -2,9 +2,9 @@
 DELIMITER / / CREATE TRIGGER check_valid_email
 AFTER
 UPDATE
-    ON users FOR EACH ROW BEGIN IF new.email != old.email THEN
+    ON users FOR EACH ROW BEGIN IF NEW.email != OLD.email THEN
 SET
-    valid_email = 0;
+    NEW.valid_email = 0;
 
 END IF;
 
