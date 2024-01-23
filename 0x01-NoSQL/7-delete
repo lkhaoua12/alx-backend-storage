@@ -1,0 +1,3 @@
+// delete docs in a collection that matchs
+db.school.delete({name: "Holberton school"},
+		 {multi: true})
